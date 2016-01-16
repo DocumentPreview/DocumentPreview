@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html style="height: 100%">
   <head>
     <meta charset="UTF-8">
     <title>Document Preview</title>
@@ -48,23 +48,22 @@
         <h1>The free, fast way to preview docment online</h1>
         <p>DocumentPreview is an opensource service based on openoffice and imagemagick that provide document preview service online!</p>
         <a target="_blank" href="https://github.com/DocumentPreview/DocumentPreview" class="button">Get DocumentPreview Now - Yes It's Free</a>
-        <div>
-          <div class="overlay">
-            <form method="post" enctype="multipart/form-data" action="/docpre/convert">
-              <div class="file-field input-field">
-                <div class="btn">
-                  <span>File</span>
-                  <input name="inputDocument" type="file">
-                </div>
-                <div class="file-path-wrapper">
-                  <input class="file-path validate" type="text">
-                </div>
-              </div>
-              <input class="btn" type="submit" value="Preview">
-            </form>
-            <iframe src=""></iframe>
+        <form method="post" target="foo" enctype="multipart/form-data" action="/docpre/convert">
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>File</span>
+              <input name="inputDocument" type="file">
+            </div>
+            <div class="file-path-wrapper">
+              <input data-target="modal1" class="file-path validate" type="text">
+            </div>
           </div>
-        </div>
+          <a class="waves-effect waves-light btn modal-trigger" onclick="preview()" href="#modal1">Preview</a>
+          <%--<input class="btn" type="submit" value="Preview">--%>
+        </form>
+        <!-- Modal Trigger -->
+
+        <!-- Modal Structure -->
       </div>
     </div>
   </div>
@@ -83,6 +82,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
 
     <script src="docpre/js/index.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.modal-trigger').leanModal();
+      });
 
+      function preview() {
+        $('iframe').contents().find('body').html('<div style="width:100%;padding-top: 10%;color: white" align="center">Loading...</div>');
+        $('form').submit();
+      }
+    </script>
+    <div id="modal1" class="modal" style="height: 90%;">
+      <iframe name="foo" style="height: 100%;width: 100%"></iframe>
+    </div>
   </body>
 </html>

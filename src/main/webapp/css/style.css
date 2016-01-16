@@ -1,5 +1,6 @@
 @charset "UTF-8";
 body {
+  height:100%;
   background: #f5f5f5;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
@@ -200,7 +201,7 @@ section p {
 
 .hero {
   background: #34495E;
-  height: 800px;
+  height: 85%;
   padding: 160px 0 0;
   box-sizing: border-box;
   text-align: center;
@@ -221,6 +222,7 @@ section p {
   color: inherit;
 }
 .hero .video {
+  margin-top: 50px;
   position: relative;
   background: #FFF;
   height: 540px;
@@ -242,8 +244,8 @@ section p {
 }
 .hero .video .overlay:before {
   cursor: pointer;
-  content: '';
   position: absolute;
+  content: '';
   top: 0;
   right: 0;
   bottom: 0;
@@ -412,6 +414,7 @@ section p {
 }
 
 .footer {
+  height: 15%;
   background: #22303d;
   padding: 24px 0;
   color: #FFF;
