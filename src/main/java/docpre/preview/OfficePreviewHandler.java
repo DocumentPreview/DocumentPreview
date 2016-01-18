@@ -2,6 +2,7 @@ package docpre.preview;
 
 import docpre.adapters.FileServiceAdapter;
 import docpre.app.WebappContext;
+import docpre.utils.GloabConfig;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Logger;
 import org.artofsolving.jodconverter.OfficeDocumentConverter;
@@ -21,12 +22,12 @@ public class OfficePreviewHandler extends BasePreviewHandler {
 
 	@Override
 	public File getPreviewFile() {
-		return new File("/Users/chengke/static/" + mFile.getUniqueKey() + "." + getPreviewFileExtension());
+		return new File(GloabConfig.get("PREVIEW_FILE_PATH") + mFile.getUniqueKey() + "." + getPreviewFileExtension());
 	}
 
 	@Override
 	public void preview() throws IOException {
-		String basePath = "http://docpre.sweetvvck.com/";
+		String basePath = GloabConfig.get("BASE_PATH");
 		mResponse.sendRedirect(basePath + "static/preview/viewer.html?file=" + basePath + "static/" + mPreviewFile.getName());
 	}
 

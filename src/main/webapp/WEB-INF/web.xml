@@ -8,7 +8,20 @@
   <param-name>fileupload.fileSizeMax</param-name>
   <param-value>5242880</param-value>
 </context-param>
-<listener>
+  <context-param>
+    <param-name>javax.faces.CONFIG_FILES</param-name>
+    <param-value>/docpre.xml</param-value>
+  </context-param>
+  <listener>
 <listener-class>docpre.app.WebappContextListener</listener-class>
 </listener>
+  <servlet>
+    <servlet-name>Faces Servlet</servlet-name>
+    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.xhtml</url-pattern>
+  </servlet-mapping>
 </web-app>

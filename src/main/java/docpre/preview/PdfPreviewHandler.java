@@ -1,6 +1,7 @@
 package docpre.preview;
 
 import docpre.adapters.FileServiceAdapter;
+import docpre.utils.GloabConfig;
 
 import javax.servlet.ServletException;
 import java.io.File;
@@ -18,12 +19,12 @@ public class PdfPreviewHandler extends BasePreviewHandler {
 
 	@Override
 	public File getPreviewFile() {
-		return new File("/Users/chengke/static/" + mFile.getUniqueKey());
+		return new File(GloabConfig.get("PREVIEW_FILE_PATH") + mFile.getUniqueKey());
 	}
 
 	@Override
 	public void preview() throws IOException {
-		String basePath = "http://docpre.sweetvvck.com/";
+		String basePath = GloabConfig.get("BASE_PATH");
 		mResponse.sendRedirect(basePath + "static/preview/viewer.html?file=" + basePath + "static/" + mPreviewFile.getName());
 	}
 

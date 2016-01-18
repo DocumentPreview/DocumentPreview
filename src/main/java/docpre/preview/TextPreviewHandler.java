@@ -1,7 +1,6 @@
 package docpre.preview;
 
 import docpre.adapters.FileServiceAdapter;
-import docpre.utils.DriveUtils;
 import org.apache.commons.io.IOUtils;
 import org.mozilla.universalchardet.CharsetListener;
 import org.mozilla.universalchardet.UniversalDetector;

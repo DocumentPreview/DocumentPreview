@@ -1,6 +1,7 @@
 package docpre.preview;
 
 import docpre.adapters.FileServiceAdapter;
+import docpre.utils.GloabConfig;
 import org.apache.commons.io.FilenameUtils;
 import org.im4java.core.ConvertCmd;
 import org.im4java.core.IM4JavaException;
@@ -13,7 +14,7 @@ import java.io.IOException;
 
 public class ImagePreviewhandler extends BasePreviewHandler {
 	static {
-		ProcessStarter.setGlobalSearchPath("/usr/local/Cellar/imagemagick/6.9.2-8/bin");
+		ProcessStarter.setGlobalSearchPath(GloabConfig.get("IMAGEMAGICK_PATH"));
 	}
 
 	public ImagePreviewhandler(FileServiceAdapter mFileServiceAdapter) {
@@ -22,12 +23,12 @@ public class ImagePreviewhandler extends BasePreviewHandler {
 
 	@Override
 	public File getPreviewFile() {
-		return new File("/Users/chengke/static/" + mFile.getUniqueKey() + "." + getPreviewFileExtension());
+		return new File(GloabConfig.get("PREVIEW_FILE_PATH") + mFile.getUniqueKey() + "." + getPreviewFileExtension());
 	}
 
 	@Override
 	public void preview() throws IOException {
-		String basePath = "http://docpre.sweetvvck.com/";
+		String basePath = GloabConfig.get("BASE_PATH");
 		mResponse.sendRedirect(basePath + "docpre/textview.jsp?isImage=true&file=" + basePath + "static/" + mPreviewFile.getName());
 	}
 

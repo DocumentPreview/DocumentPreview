@@ -1,7 +1,6 @@
 package docpre.app;
 
-import docpre.converters.ConverterManager;
-import com.jakewharton.disklrucache.DiskLruCache;
+import docpre.utils.GloabConfig;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.artofsolving.jodconverter.OfficeDocumentConverter;
@@ -61,6 +60,7 @@ public class WebappContext {
 	}
 
 	protected static void init(ServletContext servletContext) throws IOException {
+		GloabConfig.init();
 		WebappContext instance = new WebappContext(servletContext);
 		servletContext.setAttribute(KEY, instance);
 		instance.officeManager.start();
