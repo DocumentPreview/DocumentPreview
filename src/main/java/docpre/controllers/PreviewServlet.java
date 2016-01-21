@@ -1,8 +1,6 @@
 package docpre.controllers;
 
-import docpre.execptions.PreviewExecption;
 import docpre.preview.PreviewHandler;
-import docpre.preview.PreviewHandlerFactory;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;

@@ -5,11 +5,11 @@
     <title>Document Preview</title>
     
     
-    <link rel="stylesheet" href="docpre/css/reset.css">
+    <link rel="stylesheet" href="css/reset.css">
 
     <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:100,300,400,500,700|Montserrat:700'>
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
-    <link rel="stylesheet" href="docpre/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -28,7 +28,7 @@
     <div class="row">
       <div class="column">
         <div class="logo">
-          <image class="icon" src="docpre/docpre.png"></image>
+          <image class="icon" src="docpre.png"></image>
           <div>DocumentPreview<span> <i class='fa fa-code-fork'></i> me on <a target="_blank" href="https://github.com/DocumentPreview/DocumentPreview">Github</a></span></div>
         </div>
       </div>
@@ -48,7 +48,7 @@
         <h1>The free, fast way to preview docment online</h1>
         <p>DocumentPreview is an opensource service based on openoffice and imagemagick that provide document preview service online!</p>
         <a target="_blank" href="https://github.com/DocumentPreview/DocumentPreview" class="button">Get DocumentPreview Now - Yes It's Free</a>
-        <form method="post" target="foo" enctype="multipart/form-data" action="/docpre/convert">
+        <form method="post" target="foo" enctype="multipart/form-data" action="convert">
           <div class="file-field input-field">
             <div class="btn">
               <span>File</span>
@@ -81,7 +81,7 @@
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
 
-    <script src="docpre/js/index.js"></script>
+    <script src="js/index.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
         $('.modal-trigger').leanModal();

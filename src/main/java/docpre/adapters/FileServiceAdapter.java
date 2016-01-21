@@ -12,5 +12,4 @@ public interface FileServiceAdapter {
     PreviewFile info(String mFileId);
 
     InputStream get(String mFileId);
-
 }
