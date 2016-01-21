@@ -88,6 +88,6 @@
     <orderEntry type="library" name="Maven: org.openoffice:juh:3.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.openoffice:jurt:3.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.openoffice:ridl:3.2.1" level="project" />
-    <orderEntry type="library" name="Maven: org.openoffice:unoil:3.2.1" level="project" />
+    <orderEntry type="library" name="Maven: org.libreoffice:unoil:5.0.4" level="project" />
   </component>
 </module>

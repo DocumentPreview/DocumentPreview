@@ -119,7 +119,7 @@ public class UploadPreviewServlet extends HttpServlet {
 	}
 
 	private void redirect(HttpServletRequest request, HttpServletResponse response, File output) throws IOException {
-		String basePath = "http://docpre.sweetvvck.com/";
+		String basePath = "http://docpre.sweetvvck.win/";
 		response.sendRedirect(basePath + "UploadPreviewServlet/generic/web/viewer.html?file=" + basePath + "static/" + output.getName());
 	}
 
