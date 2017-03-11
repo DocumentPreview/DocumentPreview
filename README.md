@@ -10,6 +10,3 @@ Preview any kind of files online.
 
 ![](./screenshot/home.png)
 ![](./screenshot/excel.png)
-
-### Known issues
-.ppt files not support by now
