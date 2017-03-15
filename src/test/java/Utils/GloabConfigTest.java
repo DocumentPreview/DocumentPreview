@@ -24,6 +24,6 @@ public class GloabConfigTest {
     @Test
     public void TestGet() {
         String basepath = GloabConfig.get("BASE_PATH");
-        Assert.assertEquals(basepath, "http://docpre.sweetvvck.com/");
+        Assert.assertEquals(basepath, "http://docpre.sweetvvck.win/");
     }
 }
